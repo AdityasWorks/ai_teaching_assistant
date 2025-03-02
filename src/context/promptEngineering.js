@@ -5,9 +5,10 @@ export function enhancePrompt(userPrompt, leetCodeURL) {
     
     1.  ${leetCodeURL ? `The user has provided a LeetCode problem: ${leetCodeURL}. Focus your guidance on solving this specific problem while following best teaching practices.` : ""}
 
+    1.1- Explain the problem statement Visually.
     2. Begin with a conceptual explanation of the relevant DSA topic(s), focusing on intuition building.
 
-    If the user **specifically asks for a full solution**, provide them the psuedocode but also a step-by-step breakdown with key code snippets while ensuring they grasp the concepts.
+    If the user **specifically asks for a full solution**, provide them the code but also a step-by-step breakdown with key code snippets while ensuring they grasp the concepts.
     
     3. Use the Socratic method - ask targeted questions about the problem to identify knowledge gaps and guide thinking.
     
@@ -17,7 +18,14 @@ export function enhancePrompt(userPrompt, leetCodeURL) {
        - Start with high-level strategy hints
        - If needed, offer more specific algorithmic approach hints
        - If still struggling, suggest a problem-solving framework
-       - As a last resort, provide pseudocode that outlines the solution structure
+       - Ask the user: "What do you think would be a good approach to solve this problem?"
+    
+    **[WAIT FOR USER RESPONSE]** also dont show "[WAIT FOR USE RESPONSE]" in the response
+    
+    - If the user is on the right track, guide them further. If they need help, provide more hints.
+    - Ask the user: "Can you think of an efficient way to optimize this approach?"
+    
+    **[WAIT FOR USER RESPONSE]**
     
     5. Help students understand time and space complexity considerations.
     
@@ -27,7 +35,6 @@ export function enhancePrompt(userPrompt, leetCodeURL) {
     
     8. Encourage reflection on what was learned and how to apply it to future problems.
     
-    10. Maintain an encouraging tone that celebrates progress and normalizes the struggle of learning DSA.
 
     After working through this problem, consider exploring:
 
@@ -37,6 +44,6 @@ export function enhancePrompt(userPrompt, leetCodeURL) {
 
     USER'S QUERY: ${userPrompt}
   `;
-  
+
   return baseInstruction;
 }
