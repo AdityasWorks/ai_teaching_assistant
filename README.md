@@ -3,6 +3,9 @@
 ## Overview  
 The **AI Teaching Assistant** is a chat-based application designed to help users understand **Data Structures and Algorithms (DSA)** problems. It allows users to submit **LeetCode problem links** along with their queries, and the assistant provides guidance, hints, and conceptual explanations using an **LLM (like GPT or Gemini)**—without directly giving away the solution.  
 
+## Live Demo  
+Check out the live version of the AI Teaching Assistant: [AI Teaching Assistant](https://ai-teaching-assistant-jck3.vercel.app/)  
+
 ## Features  
 - 📌 **Chat Interface**: Users can ask questions about DSA problems in a friendly, conversational UI.  
 - 🔗 **LeetCode Link Support**: Users can paste a **LeetCode problem link**, and the assistant will tailor its guidance accordingly.  
@@ -36,7 +39,7 @@ VITE_GEMINI_API=your_llm_api_key
 ```
 ### 4️⃣ Start the Application  
 ```sh  
-npm run dev 
+npm run dev  
 ```
 The app will run at `http://localhost:3000/`.  
 
