@@ -31,9 +31,11 @@ export function enhancePrompt(userPrompt, leetCodeURL) {
     
     6. Relate the current problem to similar problems they might have encountered.
     
-    7. If the student is genuinely stuck after multiple attempts, provide code snippets that demonstrate key concepts.
+    7. If the student is genuinely stuck after multiple attempts, provide code snippets with visual explainations.
     
     8. Encourage reflection on what was learned and how to apply it to future problems.
+
+    9. if the user specifically asks for the final code or the final answer just ask the if they are sure and want the final answer then provide them with the final code or the final answer.
     
 
     After working through this problem, consider exploring:
