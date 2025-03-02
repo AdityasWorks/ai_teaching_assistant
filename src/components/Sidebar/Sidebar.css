@@ -1,0 +1,124 @@
+/* Add these styles to ensure proper layout */
+
+/* Make the app container a flex container with proper dimensions */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Fix the sidebar styles */
+.sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f4f9;
+  padding: 10px 15px;
+  overflow-y: auto;
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
+  width: auto; /* Allow natural width based on content */
+  min-width: 60px; /* Minimum width when collapsed */
+  z-index: 10; /* Ensure sidebar stays above other content */
+}
+
+/* When expanded, give the sidebar proper width */
+.sidebar.expanded {
+  min-width: 250px; /* Width when expanded */
+}
+
+/* Main content area should take remaining space and scroll independently */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+  width: 100%; /* Take full remaining width */
+}
+
+/* Rest of your sidebar styles remain the same */
+.sidebar .top {
+  margin-top: 15px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar img {
+  width: 30px;
+}
+
+.sidebar .menu {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.sidebar .new-chat {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #e6eaf1;
+  border-radius: 50px;
+  font-size: 14px;
+  color: grey;
+  cursor: pointer;
+}
+
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 2.0s;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.sidebar .recent-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #f0f4f9;
+  padding: 5px 0;
+}
+
+
+
+.sidebar .recent-name {
+  padding: 5px 0;
+}
+
+.sidebar .recent-entry {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 50px;
+  color: #282828;
+  cursor: pointer;
+}
+
+.sidebar .recent-entry:hover {
+  background-color: #e2e6eb;
+}
+
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.sidebar .bottom-item {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}

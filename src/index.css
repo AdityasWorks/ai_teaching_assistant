@@ -1,68 +1,174 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+#root{
   min-height: 100vh;
+  display: flex;
+  animation:fadeIn 2.0s ;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* Add these styles to your CSS */
+
+/* Code blocks */
+.code-block {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #282c34;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 15px;
+  background-color: #21252b;
+  color: #abb2bf;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #181a1f;
+}
+
+.copy-btn {
+  background-color: transparent;
+  border: 1px solid #4b5363;
+  color: #abb2bf;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: #4b5363;
+  color: white;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 15px;
+  overflow-x: auto;
+}
+
+.code-block code {
+  color: #abb2bf;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Syntax highlighting for popular languages */
+/* Python */
+.code-block.python .keyword { color: #c678dd; }
+.code-block.python .function { color: #61afef; }
+.code-block.python .string { color: #98c379; }
+.code-block.python .number { color: #d19a66; }
+.code-block.python .comment { color: #5c6370; font-style: italic; }
+
+/* JavaScript */
+.code-block.javascript .keyword { color: #c678dd; }
+.code-block.javascript .function { color: #61afef; }
+.code-block.javascript .string { color: #98c379; }
+.code-block.javascript .number { color: #d19a66; }
+.code-block.javascript .comment { color: #5c6370; font-style: italic; }
+
+/* Java */
+.code-block.java .keyword { color: #c678dd; }
+.code-block.java .function { color: #61afef; }
+.code-block.java .string { color: #98c379; }
+.code-block.java .number { color: #d19a66; }
+.code-block.java .comment { color: #5c6370; font-style: italic; }
+
+/* C/C++ */
+.code-block.c .keyword, .code-block.cpp .keyword { color: #c678dd; }
+.code-block.c .function, .code-block.cpp .function { color: #61afef; }
+.code-block.c .string, .code-block.cpp .string { color: #98c379; }
+.code-block.c .number, .code-block.cpp .number { color: #d19a66; }
+.code-block.c .comment, .code-block.cpp .comment { color: #5c6370; font-style: italic; }
+
+/* Inline code */
+.inline-code {
+  background-color: #f0f2f5;
+  color: #e06c75;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin: 25px 0 15px 0;
+  color: #333;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+  font-size: 1.4rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h3 {
+  font-size: 1.2rem;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 2em;
+  margin: 15px 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #dfe2e5;
+}
+
+th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #dfe2e5;
+  padding-left: 15px;
+  color: #6a737d;
+  margin: 20px 0;
+}
+
+/* Horizontal rule */
+hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
 }
