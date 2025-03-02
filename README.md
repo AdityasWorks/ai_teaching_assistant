@@ -22,7 +22,7 @@ The **AI Teaching Assistant** is a chat-based application designed to help users
 ## Setup Instructions  
 ### 1️⃣ Clone the Repository  
 ```sh  
-git clone https://github.com/YOUR_GITHUB/ai-teaching-assistant.git  
+git clone https://github.com/AdityasWorks/ai-teaching-assistant.git  
 cd ai-teaching-assistant  
 ```
 ### 2️⃣ Install Dependencies  
@@ -32,11 +32,11 @@ npm install
 ### 3️⃣ Set Up API Keys  
 Create a `.env` file in the project root and add:  
 ```sh  
-REACT_APP_LLM_API_KEY=your_llm_api_key  
+VITE_GEMINI_API=your_llm_api_key  
 ```
 ### 4️⃣ Start the Application  
 ```sh  
-npm start  
+npm run dev 
 ```
 The app will run at `http://localhost:3000/`.  
 
