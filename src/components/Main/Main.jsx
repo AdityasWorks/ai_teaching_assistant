@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { assets } from "../../assets/assets";
-import "./main.css";
+import "./Main.css";
 import { Context } from "../../context/Context";
 import { formatMessage } from "../utils/Formatters";
 
