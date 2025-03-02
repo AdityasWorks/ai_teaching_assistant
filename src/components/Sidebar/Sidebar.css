@@ -1,6 +1,4 @@
-/* Add these styles to ensure proper layout */
 
-/* Make the app container a flex container with proper dimensions */
 .app-container {
   display: flex;
   min-height: 100vh;
@@ -8,7 +6,6 @@
   overflow: hidden;
 }
 
-/* Fix the sidebar styles */
 .sidebar {
   height: 100vh;
   position: sticky;
@@ -25,12 +22,10 @@
   z-index: 10; /* Ensure sidebar stays above other content */
 }
 
-/* When expanded, give the sidebar proper width */
 .sidebar.expanded {
   min-width: 250px; /* Width when expanded */
 }
 
-/* Main content area should take remaining space and scroll independently */
 .main-content {
   flex: 1;
   overflow-y: auto;
@@ -38,7 +33,6 @@
   width: 100%; /* Take full remaining width */
 }
 
-/* Rest of your sidebar styles remain the same */
 .sidebar .top {
   margin-top: 15px;
   flex-grow: 1;

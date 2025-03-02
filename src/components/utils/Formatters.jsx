@@ -1,26 +1,21 @@
 import React from "react";
 import './markdownFormatting.css';
 
-// Function to format message text with code blocks and other markdown elements
 export const formatMessage = (text) => {
   if (!text) return null;
 
-  // First handle code blocks with triple backticks
   const parts = text.split("```");
 
   if (parts.length === 1) {
-    // No code blocks, just handle all other markdown
     return <div className="formatted-text">{formatMarkdown(text)}</div>;
   }
 
   return (
     <div className="formatted-text">
       {parts.map((part, index) => {
-        // Even indices are regular text, odd indices are code
         if (index % 2 === 0) {
           return <div key={index}>{formatMarkdown(part)}</div>;
         } else {
-          // Check for language specification in the first line
           const lines = part.split('\n');
           let language = '';
           let codeContent = part;
@@ -53,7 +48,7 @@ export const formatMarkdown = (text) => {
   const lines = processedText.split('\n');
   const result = [];
   let currentList = null;
-  let listType = null; // 'ul' for unordered, 'ol' for ordered
+  let listType = null; 
   let blockquoteContent = [];
   let inBlockquote = false;
 

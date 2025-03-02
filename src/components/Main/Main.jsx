@@ -19,7 +19,7 @@ const Main = () => {
 
   const handleSend = () => {
     onSent(input, leetCodeURL);
-    setLeetCodeURL(""); // Clear LeetCode URL after submission
+    setLeetCodeURL(""); 
   };
 
   return (

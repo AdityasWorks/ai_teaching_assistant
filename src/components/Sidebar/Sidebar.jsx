@@ -25,7 +25,6 @@ const Sidebar = () => {
         <img onClick={() => setExpanded(prev => !prev)} src={assets.menu_icon} alt="" className="menu" />
 
         <div className="new-chat" onClick={newChat}>
-        {/* <button onClick={newChat} className="new-chat-btn">New Chat</button> */}
           <img src={assets.plus_icon} alt="plus" onClick={newChat}  />
           {expanded ? <p>New Chat</p> : null}
         </div>
