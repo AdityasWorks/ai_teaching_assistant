@@ -12,7 +12,7 @@ const ContextProvider = (props) => {
   const [loading, setLoading] = useState(false);
   const [resultData, setResultData] = useState("");
   const [leetCodeURL, setLeetCodeURL] = useState("");
-  
+
   const [chatHistory, setChatHistory] = useState([]);
   const [isNewChat, setIsNewChat] = useState(true);
 
@@ -30,6 +30,7 @@ const ContextProvider = (props) => {
     setShowResults(true);
   
     setRecentPrompt(userPrompt);
+
   
     const historyForAPI = isNewChat ? [] : chatHistory.map(msg => ({
       role: msg.role,
@@ -75,6 +76,9 @@ const ContextProvider = (props) => {
     resultData,
     newChat,
     chatHistory,
+    leetCodeURL,
+    setLeetCodeURL,
+    
   };
 
   return (

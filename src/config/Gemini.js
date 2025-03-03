@@ -46,7 +46,7 @@ async function runChat(prompt, history = []) {
     safetySettings,
     history,
   });
-
+  console.log(prompt);
   const result = await chat.sendMessage(prompt);
   const response = result.response;
   console.log(response.text());

@@ -13,13 +13,17 @@ const Main = () => {
     setInput,
     input,
     chatHistory,
+    isNewChat,
   } = useContext(Context);
 
   const [leetCodeURL, setLeetCodeURL] = useState("");
 
+  //if anyone is seening the bug is fixed
+  
+
   const handleSend = () => {
     onSent(input, leetCodeURL);
-    setLeetCodeURL(""); 
+    if (isNewChat) setLeetCodeURL(""); 
   };
 
   return (
