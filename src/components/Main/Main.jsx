@@ -38,7 +38,7 @@ const Main = () => {
         {!showResults ? (
           <div className="greet">
             <p>
-              <span>Hello, Scaler</span>
+              <span>Hello, Student</span>
             </p>
             <p>I'm your AI teaching assistant. How can I help you learn today?</p>
           </div>
