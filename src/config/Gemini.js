@@ -7,7 +7,7 @@ import {
 
 
 
-const MODEL_NAME = "gemini-1.5-flash";
+const MODEL_NAME = "gemini-2.5-flash";
 const API_KEY = import.meta.env.VITE_GEMINI_API;
 
 async function runChat(prompt, history = []) {
